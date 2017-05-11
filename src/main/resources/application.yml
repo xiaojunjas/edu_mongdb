@@ -1,0 +1,39 @@
+office-path: D:\liberoffce
+office-port: 8100
+
+file-types: [.txt, .doc, .docx, .xls, .xlsx, .ppt, .pptx, .pdf]
+img-types: [.jpg, .jpeg, .png, .bmp, .svg]
+img-sizes: [80x100, 160x200, 240x300]
+
+server:
+    port: 7003
+
+spring:
+    thymeleaf:
+        cache: false
+        cache-period: 0
+    template:
+        cache: false
+    
+    data:
+        mongodb:
+            host: localhost
+            port: 27017
+            database: local
+            grid-fs-database: test_t
+     
+    http:
+        multipart:
+            max-file-size: 5120Mb
+            max-request-size: 5120Mb
+            
+#monitor           
+management:
+    port: 8093
+    security:
+        enabled: false
+            
+logging:
+    level:
+        root: INFO
+    file: logs/edu-mongdb.log
